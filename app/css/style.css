@@ -8,6 +8,9 @@ body {
   cursor: pointer;
   overflow-x: auto;
 }
+.point-drop{
+  cursor: pointer;
+}
 footer {
   font-size: larger;
   text-align: center;

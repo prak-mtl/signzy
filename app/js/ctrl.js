@@ -5,6 +5,7 @@ app.controller('schoolCtrl', function($scope, $http) {
     $scope.currentPage = 0;
     $scope.pagedSchools = [];
     $scope.sortMsg = 'Default Order';
+    $scope.selectPlaceHolder = "Select search type";
 
     $scope.searchList = [{name:'School Name',val:'FIELD5'},
             {name:'Address',val:'FIELD9'},
@@ -13,7 +14,11 @@ app.controller('schoolCtrl', function($scope, $http) {
             {name:'Landmark',val:'FIELD12'}];
 
     $scope.setSearch =function(searchVal){
-        $scope.searchValue = searchVal;
+        var txt = "<span class='caret'></span>"
+        $('#searchDrop').html(searchVal.name)
+        $('#searchDrop').append(txt)
+        $scope.searchValue = searchVal.val;
+        $scope.selectPlaceHolder = "Search by " + searchVal.name;
     }
 
     $scope.groupToPages = function() {
