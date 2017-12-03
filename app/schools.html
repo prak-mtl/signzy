@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NewsFeed</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS files -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/flip.css">
+	<link rel="stylesheet" href="css/navbar.css">
+	<!-- JS files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/smoothscroll.js"></script>
+</head>
+<body>
+<navbar class="navbar" id="navbar">
+  <a class="active" href="#home">Home</a>
+  <a href="#top">Top Feed</a>
+  <a href="#htu">How to use RSS</a>
+  <a href="#feed">RSS Feed</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navbar()">&#9776;</a>
+</navbar>
+<br><br>
+<div id="home">
+	<h4>What is RSS?</h4>
+	<p>
+		There are billions of pages on the Internet and trying to find what you want can often prove to be really tedious. 
+		But you can now have customised content delivered to your desktop through RSS (Really Simple Syndication) feeds.
+		<br>We offer free headlines for personal, non-commercial use via Really Simple Syndication (RSS 2.0). 
+		This is an easy way to get the latest news from us even if you are not logged on to the site.
+	</p>
+</div>
+<hr id="top">
+<div>
+	<h4>Top Feed</h4>
+	<div class="slideshow-container">
+	  <div class="mySlides fade">
+		<img src="img/top1.jpg" style="width:100%">
+		<div class="text">Fired U.S. attorney to Trump: 'Keep up the tweeting'</div>
+	  </div>
+	  <div class="mySlides fade">
+		<img src="img/top2.jpg" style="width:100%">
+		<div class="text">London Police Investigating 11 Alleged Assaults by Harvey Weinstein</div>
+	  </div>
+	  <div class="mySlides fade">
+		<img src="img/top3.jpg" style="width:100%">
+		<div class="text">Man, 77, Accused of Choking 23-Year-Old Woman He Met on Dating Site: Cops</div>
+	  </div>
+	  <div class="mySlides fade">
+		<img src="img/top4.jpg" style="width:100%">
+		<div class="text">9 bodies, 2 severed heads, found in Tokyo flat: reports</div>
+	  </div>
+	</div>
+</div>
+<hr id="htu">
+<div>
+	<h4>How can I use RSS?</h4>
+	<p>
+		Click on the section you are interested in and install a news reader that displays RSS feeds. 
+		A number of free and commercial news readers are available for download. Once the RSS reader is set to us, 
+		it will poll the website for the latest headlines.
+	<p>
+	<hr>
+	<h4>Terms of Use</h4>
+	<ul>
+		<li>RSS feeds are provided free of charge for use by individuals for personal, non-commercial use.</li>
+		<li>Attribution to us must be provided in connection with the use of these feeds.</li>
+		<li>If you provide this attribution in text, please use: "our Name".</li>
+		<li>If you provide this attribution with a graphic, please use our logo that has been included in the feed.</li>
+	</ul>
+</div>
+<hr id="feed">
+<div>
+	<h4>RSS Feed</h4>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/1.jpg">
+			</div>
+			<div class="back">
+				<p>America Is Escalating Its War of Words with North Korea</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/2.jpg">
+			</div>
+			<div class="back">
+				<p>Paul Ryan On Former Trump Campaign Officials Getting Indicted: I Love Tax Reform</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/3.jpg">
+			</div>
+			<div class="back">
+				<p>The Senate Is About To Confirm A Frenzy Of Conservative Judges</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/4.jpg">
+			</div>
+			<div class="back">
+				<p>China mulls three years' jail for anthem disrespect</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/5.jpg">
+			</div>
+			<div class="back">
+				<p>Media Skewered For Focus On Kevin Spacey Coming Out Rather Than Harassment</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/6.jpg">
+			</div>
+			<div class="back">
+				<p>High winds sweep Central Europe, leave 5 dead, others hurt</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<img src="img/7.jpg">
+			</div>
+			<div class="back">
+				<p>Rose McGowan Faces Arrest Warrant For Drugs: 'Are They Trying To Silence Me?'</p>
+			</div>
+		</div>
+	</div>
+</div>
+<footer style="text-align: center;">
+	<p>Posted by: PreOrbit&copy;</p>
+	<p>Contact information: <a href="mailto:contact@preorbit.com">contact@preorbit.com</a>.</p>
+</footer>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+		slideIndex = 1
+		}  
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+</body>
+
+</html>

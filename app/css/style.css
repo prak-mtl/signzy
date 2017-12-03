@@ -1,0 +1,15 @@
+/* style.css */
+body {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p, h4 {
+	padding: 0 5% !important;
+}
