@@ -3,3 +3,16 @@ body {
   position: relative;
   margin: auto;
 }
+.schoolTable{
+  width:100%;
+  cursor: pointer;
+  overflow-x: auto;
+}
+.point-drop{
+  cursor: pointer;
+}
+footer {
+  font-size: larger;
+  text-align: center;
+  font-weight: bolder;
+}
