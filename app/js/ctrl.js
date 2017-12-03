@@ -4,6 +4,17 @@ app.controller('schoolCtrl', function($scope, $http) {
     $scope.itemsPerPage = 5;
     $scope.currentPage = 0;
     $scope.pagedSchools = [];
+    $scope.sortMsg = 'Default Order';
+
+    $scope.searchList = [{name:'School Name',val:'FIELD5'},
+            {name:'Address',val:'FIELD9'},
+            {name:'Area',val:'FIELD10'},
+            {name:'Pincode',val:'FIELD11'},
+            {name:'Landmark',val:'FIELD12'}];
+
+    $scope.setSearch =function(searchVal){
+        $scope.searchValue = searchVal;
+    }
 
     $scope.groupToPages = function() {
         $http.get("bangaloreSchools.json").then(function(response) {
