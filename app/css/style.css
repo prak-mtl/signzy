@@ -3,3 +3,8 @@ body {
   position: relative;
   margin: auto;
 }
+.schoolTable{
+  width:100%;
+  cursor: pointer;
+  overflow-x: auto;
+}

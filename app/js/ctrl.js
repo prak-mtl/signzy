@@ -45,5 +45,12 @@ app.controller('schoolCtrl', function($scope, $http) {
     $scope.setPage = function () {
         $scope.currentPage = this.n;
     };
+
+    $scope.showMap = function (latlon) {
+        var map = new google.maps.Map(document.getElementById("map"), {
+            center:new google.maps.LatLng(latlon.replace("POINT(", "").replace(" ", ",").replace(")", "")),
+            zoom:5
+        });
+    }
 });
 
