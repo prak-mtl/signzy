@@ -1,0 +1,14 @@
+{
+  "name": "signzy",
+  "description": "A project to search school",
+  "version": "0.0.0",
+  "homepage": "https://github.com/prak-mtl/signzy",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.3.7"
+  }
+}

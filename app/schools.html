@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="image/icon.png" />
+	<title>Search School</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- JS files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="js/ctrl.js"></script>
+
+</head>
+<body ng-app="schoolApp" ng-controller="schoolCtrl" ng-init="groupToPages()">
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Search School</a>
+		</div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sort Table<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li ng-click="sortOrder = ''"><a href="#">Default</a></li>
+                    <li ng-click="sortOrder = 'FIELD5'"><a href="#">By Name</a></li>
+                    <li ng-click="sortOrder = 'FIELD11'"><a href="#">By​ ​Pincode</a></li>
+                    <li ng-click="sortOrder = 'FIELD8'"><a href="#">By Medium Of Inst</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-right">
+            <div class="input-group">
+                <input type="text" class="form-control" size="70" ng-model="searchValue"
+                       placeholder="Search school on the basis of School Name, Address, Area, Pincode OR Landmark">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" ng-click="searchTerm = searchValue">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+	</div>
+</nav>
+<section class="container-fluid" style="width:100%; overflow-x: auto;">
+    <table class="table table-striped table-bordered table-hover table-condensed table-responsive">
+        <thead>
+            <th>S. No.</th>
+            <th>Block</th>
+            <th>Cluster</th>
+            <th>School Id</th>
+            <th>School Name</th>
+            <th>Category</th>
+            <th>Gender</th>
+            <th>Medium of Instructions</th>
+            <th>Address</th>
+            <th>Area</th>
+            <th>Pincode</th>
+            <th>Landmark</th>
+            <th>Bus Routes</th>
+        </thead>
+        <tfoot>
+            <ul class="pagination pagination pagination-sm pull-right">
+                <li ng-class="{disabled: currentPage == 0}">
+                    <a href ng-click="prevPage()">« Prev</a>
+                </li>
+                <li ng-repeat="n in range(pagedSchools.length, currentPage, currentPage + gap)"
+                    ng-class="{active: n == currentPage}" ng-click="setPage()">
+                    <a href ng-bind="n + 1">1</a>
+                </li>
+                <li ng-class="{disabled: (currentPage) == pagedSchools.length - 1}">
+                    <a href ng-click="nextPage()">Next »</a>
+                </li>
+            </ul>
+        </tfoot>
+        <tbody ng-repeat="school in pagedSchools[currentPage] | orderBy:sortOrder | filter:searchTerm">
+            <td>{{ $index + 1 }}</td>
+            <td>{{school.FIELD2}}</td>
+            <td>{{school.FIELD3}}</td>
+            <td>{{school.FIELD4}}</td>
+            <td>{{school.FIELD5}}</td>
+            <td>{{school.FIELD6}}</td>
+            <td>{{school.FIELD7}}</td>
+            <td>{{school.FIELD8}}</td>
+            <td>{{school.FIELD9}}</td>
+            <td>{{school.FIELD10}}</td>
+            <td>{{school.FIELD11}}</td>
+            <td>{{school.FIELD12}}</td>
+            <td>{{school.FIELD14}}</td>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
